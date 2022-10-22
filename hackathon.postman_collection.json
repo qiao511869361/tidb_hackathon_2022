@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "2efb9bf3-0956-4adb-b31a-e4161af57279",
+		"name": "hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ0ZXN0dGVzdCIsImRhdGEiOiJ0ZXN0dGVzdCIsImlzcyI6ImFkbWluIiwiZXhwIjoxNjY2NjE5ODg4LCJpYXQiOjE2NjY0NDcwODh9.W-0-a5DxOahX7Zx-2p9pS1lw5KstZ4soBTUrobChEcRv8wjhBkgGNSubC2wJ2D9-1xEDGN-aciLHHW22dVFMmiI8b_aF1_mToTne5hvzQtE6Y_iPDFTiXz8RR2gRfgMIG7idQ3hLEyGgbGB3-pxVND2aJwOPHoNGpbWWz2DHgKs",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test\",\n    \"password\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/api/getJWT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"getJWT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verification",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ0ZXN0IiwiZGF0YSI6InRlc3QiLCJpc3MiOiJhZG1pbiIsImV4cCI6MTY2NjYyMjU5MSwiaWF0IjoxNjY2NDQ5NzkxfQ.FjBNVfOtGjHAmRibhXUpTlbyzveXH2JGsBzCInthEbQYv9UhUnUe-lB_sYKOi5fo7ukOzoF13cR66jJRL3mpaoX3MY4yRsup3viVrvF3L9G3Gb3pZoa9GicXYjU5xJBQhpfZUdMhL9MbTEKWz1tvU2zSTuzzq-KYLgkmCFr-urc",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8087/verification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"verification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get member info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ0ZXN0IiwiZGF0YSI6InRlc3QiLCJpc3MiOiJhZG1pbiIsImV4cCI6MTY2NjYyMjU5MSwiaWF0IjoxNjY2NDQ5NzkxfQ.FjBNVfOtGjHAmRibhXUpTlbyzveXH2JGsBzCInthEbQYv9UhUnUe-lB_sYKOi5fo7ukOzoF13cR66jJRL3mpaoX3MY4yRsup3viVrvF3L9G3Gb3pZoa9GicXYjU5xJBQhpfZUdMhL9MbTEKWz1tvU2zSTuzzq-KYLgkmCFr-urc",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8087/member/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"member",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
