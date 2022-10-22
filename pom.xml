@@ -30,7 +30,7 @@
         <hutool.version>5.4.6</hutool.version>
         <mybatisplus.version>3.4.0</mybatisplus.version>
         <mapstruct.version>1.2.0.Final</mapstruct.version>
-        <jwt.version>3.10.3</jwt.version>
+        <jwt.version>3.2.0</jwt.version>
     </properties>
 
     <dependencies>
@@ -77,10 +77,10 @@
         </dependency>
 
         <!--reids-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-data-redis</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
 
         <!--Swagger-->
         <dependency>
