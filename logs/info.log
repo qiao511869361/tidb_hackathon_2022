@@ -49,3 +49,405 @@
 2022-10-22 13:16:35.879  WARN 2488 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=hackathon, managementUrl=http://192.168.81.153:8087/actuator, healthUrl=http://192.168.81.153:8087/actuator/health, serviceUrl=http://192.168.81.153:8087/) at spring-boot-admin ([http://localhost:8087/instances]): 404 : [{"timestamp":"2022-10-22 13:16:35:846","status":404,"error":"Not Found","message":"","path":"/instances"}]. Further attempts are logged on DEBUG level
 2022-10-22 13:17:10.622  INFO 2488 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
 2022-10-22 13:17:10.638  INFO 2488 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 16:54:00.011  WARN 7982 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 16:53:54.974  INFO 7982 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 7982 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 16:54:05.039 DEBUG 7982 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 16:54:05.039  INFO 7982 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 16:54:05.894  INFO 7982 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 16:54:05.901  INFO 7982 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 16:54:05.939  INFO 7982 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2022-10-22 16:54:06.389  INFO 7982 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 16:54:06.399  INFO 7982 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 16:54:06.399  INFO 7982 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 16:54:06.533  INFO 7982 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 16:54:06.533  INFO 7982 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1432 ms
+2022-10-22 16:54:07.354  INFO 7982 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 16:54:07.610  INFO 7982 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 16:54:07.652  INFO 7982 --- [main] c.t.h.Application                        : Started Application in 33.192 seconds (JVM running for 45.29)
+2022-10-22 16:54:07.654  INFO 7982 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 16:54:07.654  INFO 7982 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 16:54:07.654  INFO 7982 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 16:54:07.654  INFO 7982 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 16:54:07.660  INFO 7982 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T16:54:07.660
+2022-10-22 16:55:30.017  INFO 7982 --- [http-nio-8087-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 16:55:30.018  INFO 7982 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 16:55:30.027  INFO 7982 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 9 ms
+2022-10-22 16:57:10.434  INFO 7982 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 17:40:48.034  WARN 8952 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 17:40:43.026  INFO 8952 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 8952 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 17:40:53.057 DEBUG 8952 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 17:40:53.058  INFO 8952 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 17:40:53.901  INFO 8952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 17:40:53.906  INFO 8952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 17:40:53.940  INFO 8952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2022-10-22 17:40:54.412  INFO 8952 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 17:40:54.423  INFO 8952 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 17:40:54.423  INFO 8952 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 17:40:54.559  INFO 8952 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 17:40:54.560  INFO 8952 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1437 ms
+2022-10-22 17:40:55.386  INFO 8952 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 17:40:55.649  INFO 8952 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 17:40:55.692  INFO 8952 --- [main] c.t.h.Application                        : Started Application in 33.204 seconds (JVM running for 43.97)
+2022-10-22 17:40:55.694  INFO 8952 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 17:40:55.694  INFO 8952 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 17:40:55.694  INFO 8952 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 17:40:55.694  INFO 8952 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 17:40:55.700  INFO 8952 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T17:40:55.700
+2022-10-22 17:41:48.997  INFO 8952 --- [http-nio-8087-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 17:41:48.997  INFO 8952 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 17:41:49.006  INFO 8952 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 9 ms
+2022-10-22 17:41:56.345  INFO 8952 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 17:48:22.470  WARN 9108 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5005 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 17:48:17.460  INFO 9108 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 9108 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 17:48:27.495 DEBUG 9108 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 17:48:27.495  INFO 9108 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 17:48:28.110  INFO 9108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 17:48:28.113  INFO 9108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 17:48:28.136  INFO 9108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 17:48:28.503  INFO 9108 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 17:48:28.550  INFO 9108 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 17:48:28.550  INFO 9108 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 17:48:28.625  INFO 9108 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 17:48:28.626  INFO 9108 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1090 ms
+2022-10-22 17:48:28.918  INFO 9108 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.publicKeyStr
+2022-10-22 17:48:28.918  INFO 9108 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.privateKeyStr
+2022-10-22 17:48:29.274  INFO 9108 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 17:48:29.492  INFO 9108 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 17:48:29.533  INFO 9108 --- [main] c.t.h.Application                        : Started Application in 32.505 seconds (JVM running for 43.265)
+2022-10-22 17:48:29.535  INFO 9108 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 17:48:29.535  INFO 9108 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 17:48:29.535  INFO 9108 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 17:48:29.535  INFO 9108 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 17:48:29.539  INFO 9108 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T17:48:29.539
+2022-10-22 17:48:45.838  INFO 9108 --- [http-nio-8087-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 17:48:45.839  INFO 9108 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 17:48:45.845  INFO 9108 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2022-10-22 17:49:41.145  INFO 9108 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 17:50:54.021  WARN 9172 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 4997 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 17:50:49.020  INFO 9172 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 9172 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 17:50:59.033 DEBUG 9172 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 17:50:59.034  INFO 9172 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 17:50:59.694  INFO 9172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 17:50:59.697  INFO 9172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 17:50:59.721  INFO 9172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 17:51:00.087  INFO 9172 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 17:51:00.095  INFO 9172 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 17:51:00.095  INFO 9172 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 17:51:00.218  INFO 9172 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 17:51:00.218  INFO 9172 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1153 ms
+2022-10-22 17:51:00.570  INFO 9172 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.publicKeyStr
+2022-10-22 17:51:00.570  INFO 9172 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.privateKeyStr
+2022-10-22 17:51:00.974  INFO 9172 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 17:51:01.203  INFO 9172 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 17:51:01.242  INFO 9172 --- [main] c.t.h.Application                        : Started Application in 32.704 seconds (JVM running for 43.471)
+2022-10-22 17:51:01.244  INFO 9172 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 17:51:01.244  INFO 9172 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 17:51:01.244  INFO 9172 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 17:51:01.245  INFO 9172 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 17:51:01.248  INFO 9172 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T17:51:01.248
+2022-10-22 17:51:06.942  INFO 9172 --- [http-nio-8087-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 17:51:06.943  INFO 9172 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 17:51:06.949  INFO 9172 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2022-10-22 17:53:05.438  INFO 9172 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 17:53:51.628  WARN 9230 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5007 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 17:53:46.616  INFO 9230 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 9230 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 17:53:56.651 DEBUG 9230 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 17:53:56.652  INFO 9230 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 17:53:57.268  INFO 9230 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 17:53:57.271  INFO 9230 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 17:53:57.294  INFO 9230 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2022-10-22 17:53:57.630  INFO 9230 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 17:53:57.638  INFO 9230 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 17:53:57.638  INFO 9230 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 17:53:57.742  INFO 9230 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 17:53:57.742  INFO 9230 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1047 ms
+2022-10-22 17:53:58.030  INFO 9230 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.publicKeyStr
+2022-10-22 17:53:58.030  INFO 9230 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.privateKeyStr
+2022-10-22 17:53:58.388  INFO 9230 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 17:53:58.594  INFO 9230 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 17:53:58.634  INFO 9230 --- [main] c.t.h.Application                        : Started Application in 32.467 seconds (JVM running for 43.252)
+2022-10-22 17:53:58.636  INFO 9230 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 17:53:58.636  INFO 9230 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 17:53:58.636  INFO 9230 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 17:53:58.637  INFO 9230 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 17:53:58.640  INFO 9230 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T17:53:58.640
+2022-10-22 17:54:11.057  INFO 9230 --- [http-nio-8087-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 17:54:11.057  INFO 9230 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 17:54:11.062  INFO 9230 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 5 ms
+2022-10-22 17:59:05.477  INFO 9230 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:00:14.084  WARN 9404 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5008 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 18:00:09.072  INFO 9404 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 9404 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 18:00:19.112 DEBUG 9404 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 18:00:19.113  INFO 9404 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 18:00:19.755  INFO 9404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 18:00:19.758  INFO 9404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 18:00:19.782  INFO 9404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 18:00:20.151  INFO 9404 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 18:00:20.158  INFO 9404 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 18:00:20.159  INFO 9404 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 18:00:20.272  INFO 9404 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 18:00:20.272  INFO 9404 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1116 ms
+2022-10-22 18:00:20.585  INFO 9404 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.publicKeyStr
+2022-10-22 18:00:20.585  INFO 9404 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.privateKeyStr
+2022-10-22 18:00:24.959  INFO 9404 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:00:25.208  INFO 9404 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 18:00:25.260  INFO 9404 --- [main] c.t.h.Application                        : Started Application in 36.674 seconds (JVM running for 47.723)
+2022-10-22 18:00:25.263  INFO 9404 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 18:00:25.263  INFO 9404 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 18:00:25.264  INFO 9404 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 18:00:25.264  INFO 9404 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 18:00:25.269  INFO 9404 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T18:00:25.268
+2022-10-22 18:01:04.329  INFO 9404 --- [http-nio-8087-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 18:01:04.330  INFO 9404 --- [http-nio-8087-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 18:01:04.335  INFO 9404 --- [http-nio-8087-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 5 ms
+2022-10-22 18:03:02.323  INFO 9404 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:04:13.827  WARN 9504 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 18:04:08.793  INFO 9504 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 9504 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 18:04:18.842 DEBUG 9504 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 18:04:18.843  INFO 9504 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 18:04:19.459  INFO 9504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 18:04:19.462  INFO 9504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 18:04:19.485  INFO 9504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 18:04:19.827  INFO 9504 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 18:04:19.834  INFO 9504 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 18:04:19.835  INFO 9504 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 18:04:19.950  INFO 9504 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 18:04:19.950  INFO 9504 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1066 ms
+2022-10-22 18:04:20.236  INFO 9504 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.publicKeyStr
+2022-10-22 18:04:20.236  INFO 9504 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.privateKeyStr
+2022-10-22 18:04:34.307  INFO 9504 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:04:34.564  INFO 9504 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 18:04:34.618  INFO 9504 --- [main] c.t.h.Application                        : Started Application in 46.257 seconds (JVM running for 57.052)
+2022-10-22 18:04:34.620  INFO 9504 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 18:04:34.620  INFO 9504 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 18:04:34.620  INFO 9504 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 18:04:34.620  INFO 9504 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 18:04:34.623  INFO 9504 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T18:04:34.623
+2022-10-22 18:04:53.382  INFO 9504 --- [http-nio-8087-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 18:04:53.383  INFO 9504 --- [http-nio-8087-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 18:04:53.390  INFO 9504 --- [http-nio-8087-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2022-10-22 18:05:54.374  INFO 9504 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:07:08.271  WARN 9568 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 18:07:03.259  INFO 9568 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 9568 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 18:07:13.293 DEBUG 9568 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 18:07:13.294  INFO 9568 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 18:07:13.935  INFO 9568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 18:07:13.938  INFO 9568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 18:07:13.961  INFO 9568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 18:07:14.307  INFO 9568 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 18:07:14.315  INFO 9568 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 18:07:14.315  INFO 9568 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 18:07:14.445  INFO 9568 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 18:07:14.445  INFO 9568 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1102 ms
+2022-10-22 18:07:14.744  INFO 9568 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.publicKeyStr
+2022-10-22 18:07:14.745  INFO 9568 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.privateKeyStr
+2022-10-22 18:07:15.139  INFO 9568 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:07:15.394  INFO 9568 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 18:07:15.491  INFO 9568 --- [main] c.t.h.Application                        : Started Application in 32.742 seconds (JVM running for 43.535)
+2022-10-22 18:07:15.494  INFO 9568 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 18:07:15.494  INFO 9568 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 18:07:15.494  INFO 9568 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 18:07:15.494  INFO 9568 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 18:07:15.509  INFO 9568 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T18:07:15.509
+2022-10-22 18:07:37.279  INFO 9568 --- [http-nio-8087-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 18:07:37.280  INFO 9568 --- [http-nio-8087-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 18:07:37.287  INFO 9568 --- [http-nio-8087-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 7 ms
+2022-10-22 18:23:44.259  INFO 9568 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:24:47.222  WARN 9932 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 18:24:42.185  INFO 9932 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 9932 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 18:24:52.243 DEBUG 9932 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 18:24:52.244  INFO 9932 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 18:24:52.887  INFO 9932 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 18:24:52.890  INFO 9932 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 18:24:52.914  INFO 9932 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 18:24:53.265  INFO 9932 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 18:24:53.274  INFO 9932 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 18:24:53.274  INFO 9932 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 18:24:53.398  INFO 9932 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 18:24:53.399  INFO 9932 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1113 ms
+2022-10-22 18:24:53.697  INFO 9932 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.publicKeyStr
+2022-10-22 18:24:53.698  INFO 9932 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.privateKeyStr
+2022-10-22 18:24:54.074  INFO 9932 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:24:54.296  INFO 9932 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 18:24:54.338  INFO 9932 --- [main] c.t.h.Application                        : Started Application in 32.601 seconds (JVM running for 43.579)
+2022-10-22 18:24:54.340  INFO 9932 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 18:24:54.340  INFO 9932 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 18:24:54.340  INFO 9932 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 18:24:54.340  INFO 9932 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 18:24:54.344  INFO 9932 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T18:24:54.344
+2022-10-22 18:25:14.516  INFO 9932 --- [http-nio-8087-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 18:25:14.517  INFO 9932 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 18:25:14.523  INFO 9932 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2022-10-22 18:26:10.243  INFO 9932 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:28:14.831  WARN 9992 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 18:28:09.826  INFO 9992 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 9992 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 18:28:19.850 DEBUG 9992 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 18:28:19.850  INFO 9992 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 18:28:20.525  INFO 9992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 18:28:20.528  INFO 9992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 18:28:20.551  INFO 9992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 18:28:20.898  INFO 9992 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 18:28:20.906  INFO 9992 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 18:28:20.907  INFO 9992 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 18:28:21.022  INFO 9992 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 18:28:21.022  INFO 9992 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1131 ms
+2022-10-22 18:28:21.304  INFO 9992 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.publicKeyStr
+2022-10-22 18:28:21.304  INFO 9992 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.privateKeyStr
+2022-10-22 18:28:21.664  INFO 9992 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:28:21.876  INFO 9992 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 18:28:21.918  INFO 9992 --- [main] c.t.h.Application                        : Started Application in 32.596 seconds (JVM running for 43.401)
+2022-10-22 18:28:21.920  INFO 9992 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 18:28:21.920  INFO 9992 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 18:28:21.920  INFO 9992 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 18:28:21.920  INFO 9992 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 18:28:21.924  INFO 9992 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T18:28:21.923
+2022-10-22 18:28:24.987  INFO 9992 --- [http-nio-8087-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 18:28:24.988  INFO 9992 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 18:28:24.994  INFO 9992 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2022-10-22 18:31:07.955  INFO 9992 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:31:52.545  WARN 10075 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 18:31:47.512  INFO 10075 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 10075 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 18:31:57.565 DEBUG 10075 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 18:31:57.566  INFO 10075 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 18:31:58.214  INFO 10075 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 18:31:58.217  INFO 10075 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 18:31:58.244  INFO 10075 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2022-10-22 18:31:58.649  INFO 10075 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 18:31:58.657  INFO 10075 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 18:31:58.657  INFO 10075 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 18:31:58.787  INFO 10075 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 18:31:58.787  INFO 10075 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1178 ms
+2022-10-22 18:31:59.109  INFO 10075 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.publicKeyStr
+2022-10-22 18:31:59.109  INFO 10075 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.tidb.hackathon.util.JWTUtil.privateKeyStr
+2022-10-22 18:31:59.530  INFO 10075 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:31:59.782  INFO 10075 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 18:31:59.827  INFO 10075 --- [main] c.t.h.Application                        : Started Application in 32.793 seconds (JVM running for 43.541)
+2022-10-22 18:31:59.829  INFO 10075 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 18:31:59.829  INFO 10075 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 18:31:59.829  INFO 10075 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 18:31:59.829  INFO 10075 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 18:31:59.835  INFO 10075 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T18:31:59.835
+2022-10-22 18:32:08.366  INFO 10075 --- [http-nio-8087-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 18:32:08.367  INFO 10075 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 18:32:08.374  INFO 10075 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 7 ms
+2022-10-22 18:35:14.666  INFO 10075 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:36:39.362  WARN 10185 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 18:36:34.353  INFO 10185 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 10185 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 18:36:44.381 DEBUG 10185 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 18:36:44.382  INFO 10185 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 18:36:45.038  INFO 10185 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 18:36:45.040  INFO 10185 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 18:36:45.065  INFO 10185 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 18:36:45.417  INFO 10185 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 18:36:45.425  INFO 10185 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 18:36:45.425  INFO 10185 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 18:36:45.537  INFO 10185 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 18:36:45.537  INFO 10185 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1114 ms
+2022-10-22 18:36:46.207  INFO 10185 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:36:46.434  INFO 10185 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 18:36:46.479  INFO 10185 --- [main] c.t.h.Application                        : Started Application in 32.615 seconds (JVM running for 43.398)
+2022-10-22 18:36:46.481  INFO 10185 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 18:36:46.481  INFO 10185 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 18:36:46.481  INFO 10185 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 18:36:46.482  INFO 10185 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 18:36:46.487  INFO 10185 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T18:36:46.487
+2022-10-22 18:37:06.763  INFO 10185 --- [http-nio-8087-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 18:37:06.764  INFO 10185 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 18:37:06.771  INFO 10185 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2022-10-22 18:42:43.166  INFO 10185 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:43:45.090  WARN 10370 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5005 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 18:43:40.080  INFO 10370 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 10370 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 18:43:50.108 DEBUG 10370 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 18:43:50.109  INFO 10370 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 18:43:50.724  INFO 10370 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 18:43:50.727  INFO 10370 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 18:43:50.751  INFO 10370 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 18:43:51.087  INFO 10370 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 18:43:51.094  INFO 10370 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 18:43:51.095  INFO 10370 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 18:43:51.201  INFO 10370 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 18:43:51.201  INFO 10370 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1051 ms
+2022-10-22 18:43:51.869  INFO 10370 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:43:52.098  INFO 10370 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 18:43:52.141  INFO 10370 --- [main] c.t.h.Application                        : Started Application in 32.532 seconds (JVM running for 43.256)
+2022-10-22 18:43:52.143  INFO 10370 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 18:43:52.144  INFO 10370 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 18:43:52.144  INFO 10370 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 18:43:52.144  INFO 10370 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 18:43:52.147  INFO 10370 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T18:43:52.147
+2022-10-22 18:44:06.129  INFO 10370 --- [http-nio-8087-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 18:44:06.130  INFO 10370 --- [http-nio-8087-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 18:44:06.136  INFO 10370 --- [http-nio-8087-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2022-10-22 18:48:32.065  INFO 10370 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:49:28.939  WARN 10499 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5035 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 18:49:23.901  INFO 10499 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 10499 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 18:49:33.953 DEBUG 10499 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 18:49:33.954  INFO 10499 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 18:49:34.602  INFO 10499 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 18:49:34.605  INFO 10499 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 18:49:34.629  INFO 10499 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 18:49:35.000  INFO 10499 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 18:49:35.007  INFO 10499 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 18:49:35.008  INFO 10499 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 18:49:35.126  INFO 10499 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 18:49:35.126  INFO 10499 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1134 ms
+2022-10-22 18:49:35.780  INFO 10499 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:49:35.992  INFO 10499 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 18:49:36.032  INFO 10499 --- [main] c.t.h.Application                        : Started Application in 32.57 seconds (JVM running for 43.32)
+2022-10-22 18:49:36.033  INFO 10499 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 18:49:36.034  INFO 10499 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 18:49:36.034  INFO 10499 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 18:49:36.034  INFO 10499 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 18:49:36.039  INFO 10499 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T18:49:36.039
+2022-10-22 18:49:56.166  INFO 10499 --- [http-nio-8087-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 18:49:56.167  INFO 10499 --- [http-nio-8087-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 18:49:56.175  INFO 10499 --- [http-nio-8087-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 8 ms
+2022-10-22 18:53:52.180  INFO 10499 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:54:39.328  WARN 10603 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5005 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 18:54:34.318  INFO 10603 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 10603 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 18:54:44.350 DEBUG 10603 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 18:54:44.351  INFO 10603 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 18:54:44.962  INFO 10603 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 18:54:44.965  INFO 10603 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 18:54:44.988  INFO 10603 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 18:54:45.331  INFO 10603 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 18:54:45.338  INFO 10603 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 18:54:45.339  INFO 10603 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 18:54:45.447  INFO 10603 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 18:54:45.448  INFO 10603 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1055 ms
+2022-10-22 18:54:46.090  INFO 10603 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:54:46.301  INFO 10603 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 18:54:46.342  INFO 10603 --- [main] c.t.h.Application                        : Started Application in 32.499 seconds (JVM running for 43.194)
+2022-10-22 18:54:46.344  INFO 10603 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 18:54:46.344  INFO 10603 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 18:54:46.344  INFO 10603 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 18:54:46.345  INFO 10603 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 18:54:46.348  INFO 10603 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T18:54:46.348
+2022-10-22 18:54:49.377  INFO 10603 --- [http-nio-8087-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 18:54:49.378  INFO 10603 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 18:54:49.385  INFO 10603 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 7 ms
+2022-10-22 18:55:14.913  INFO 10603 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:56:04.577  WARN 10634 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5007 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 18:55:59.565  INFO 10634 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 10634 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 18:56:09.598 DEBUG 10634 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 18:56:09.599  INFO 10634 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 18:56:10.223  INFO 10634 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-10-22 18:56:10.226  INFO 10634 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-10-22 18:56:10.249  INFO 10634 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-10-22 18:56:10.591  INFO 10634 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 18:56:10.599  INFO 10634 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 18:56:10.599  INFO 10634 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 18:56:10.704  INFO 10634 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 18:56:10.705  INFO 10634 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1061 ms
+2022-10-22 18:56:11.345  INFO 10634 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 18:56:11.555  INFO 10634 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 18:56:11.600  INFO 10634 --- [main] c.t.h.Application                        : Started Application in 32.503 seconds (JVM running for 43.268)
+2022-10-22 18:56:11.602  INFO 10634 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 18:56:11.602  INFO 10634 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 18:56:11.602  INFO 10634 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 18:56:11.602  INFO 10634 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 18:56:11.606  INFO 10634 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T18:56:11.606
+2022-10-22 18:56:16.889  INFO 10634 --- [http-nio-8087-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 18:56:16.889  INFO 10634 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 18:56:16.895  INFO 10634 --- [http-nio-8087-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2022-10-22 18:56:38.850  INFO 10634 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
