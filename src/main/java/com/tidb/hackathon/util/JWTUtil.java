@@ -1,56 +1,62 @@
-//package com.tidb.hackathon.util;
-//
-//import cn.hutool.json.JSON;
-//import cn.hutool.json.JSONObject;
-//import com.sun.org.slf4j.internal.Logger;
-//import com.sun.org.slf4j.internal.LoggerFactory;
-//
-//import java.util.HashMap;
-//import java.util.Map;
-//
-//public class JWTUtil {
-//    private static final Logger logger = LoggerFactory.getLogger(JWTUtil.class);
-//
-//    //私钥
-//    private static final String TOKEN_SECRET = "123456";
-//
-//    /**
-//     * 生成token，自定义过期时间 毫秒
-//     *
-//     * @param userTokenDTO
-//     * @return
-//     */
-//    public static String generateToken(UserTokenDTO userTokenDTO) {
-//        try {
-//            // 私钥和加密算法
-//            Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);
-//            // 设置头部信息
-//            Map<String, Object> header = new HashMap<>(2);
-//            header.put("Type", "Jwt");
-//            header.put("alg", "HS256");
-//
-//            return JWT.create()
-//                    .withHeader(header)
-//                    .withClaim("token", JSONObject.toJSONString(userTokenDTO))
-//                    //.withExpiresAt(date)
-//                    .sign(algorithm);
-//        } catch (Exception e) {
-//            logger.error("generate token occur error, error is:{}", e);
-//            return null;
-//        }
-//    }
-//
-//    /**
-//     * 检验token是否正确
-//     *
-//     * @param token
-//     * @return
-//     */
-//    public static UserTokenDTO parseToken(String token) {
-//        Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);
-//        JWTVerifier verifier = JWT.require(algorithm).build();
-//        DecodedJWT jwt = verifier.verify(token);
-//        String tokenInfo = jwt.getClaim("token").asString();
-//        return JSON.parseObject(tokenInfo, UserTokenDTO.class);
-//    }
-//}
+package com.tidb.hackathon.util;
+
+import cn.hutool.json.JSON;
+import cn.hutool.json.JSONObject;
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTVerifier;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.interfaces.DecodedJWT;
+import com.tidb.hackathon.exception.BizException;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.util.StringUtils;
+
+import java.nio.charset.Charset;
+import java.security.KeyFactory;
+import java.security.PublicKey;
+import java.security.Signature;
+import java.security.spec.X509EncodedKeySpec;
+import java.util.Base64;
+import java.util.HashMap;
+import java.util.Map;
+
+@Slf4j
+public class JWTUtil {
+    private static final Logger logger = LoggerFactory.getLogger(JWTUtil.class);
+
+    public static final String SIGN_ALGORITHMS = "SHA256WithRSA";
+
+    public static final Charset DEFAULT_CHARSET = Charset.forName("UTF-8");
+
+    @Value("${PRIVATE_KEY}")
+    private static String PRIVATE_KEY;
+
+    @Value("${PUBLIC_KEY}")
+    private static String PUBLIC_KEY;
+
+    /**
+     * 检验token是否正确
+     *
+     * @param content
+     * @return
+     */
+    public static boolean verifyToken(String content, String sign) {
+        try {
+            KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+            byte[] encodedKey = Base64.getDecoder().decode(PUBLIC_KEY);
+            PublicKey pubKey = keyFactory.generatePublic(new X509EncodedKeySpec(encodedKey));
+
+            Signature signature = Signature.getInstance(SIGN_ALGORITHMS);
+
+            signature.initVerify(pubKey);
+            signature.update(content.getBytes(DEFAULT_CHARSET));
+
+            return signature.verify(Base64.getDecoder().decode(sign));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+}
