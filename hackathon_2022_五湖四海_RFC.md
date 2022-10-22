@@ -6,6 +6,9 @@
 
 队员：書源，张泽龙，庾子浩
 
+## 仓库
+https://github.com/qiao511869361/tidb_hackathon_2022.git
+
 # SSO 实现 TiDB 登录权限校验
 
 ## 背景和动机
