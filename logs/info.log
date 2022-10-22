@@ -1,0 +1,51 @@
+2022-10-22 13:07:33.199  WARN 2291 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 13:07:28.191  INFO 2291 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 2291 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 13:07:38.225  INFO 2291 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 13:07:39.852  INFO 2291 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 13:07:39.867  INFO 2291 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 13:07:39.867  INFO 2291 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 13:07:40.027  INFO 2291 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 13:07:40.028  INFO 2291 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1746 ms
+2022-10-22 13:07:40.795  INFO 2291 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-22 13:07:40.964  INFO 2291 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 13:07:41.101  WARN 2291 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-10-22 13:07:41.523  INFO 2291 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2022-10-22 13:07:41.657  INFO 2291 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 13:07:41.734  INFO 2291 --- [main] c.t.h.Application                        : Started Application in 34.165 seconds (JVM running for 46.132)
+2022-10-22 13:07:41.742  INFO 2291 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 13:07:41.742  INFO 2291 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 13:07:41.742  INFO 2291 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 13:07:41.743  INFO 2291 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 13:07:41.745  INFO 2291 --- [main] c.t.h.StartupRunner                      : cactus 启动完毕,时间:2022-10-22T13:07:41.743
+2022-10-22 13:07:42.175  INFO 2291 --- [RMI TCP Connection(1)-192.168.81.153] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 13:07:42.176  INFO 2291 --- [RMI TCP Connection(1)-192.168.81.153] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 13:07:42.186  INFO 2291 --- [RMI TCP Connection(1)-192.168.81.153] o.s.w.s.DispatcherServlet                : Completed initialization in 10 ms
+2022-10-22 13:07:57.048  WARN 2291 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=cactus, managementUrl=http://192.168.81.153:8087/actuator, healthUrl=http://192.168.81.153:8087/actuator/health, serviceUrl=http://192.168.81.153:8087/) at spring-boot-admin ([http://localhost:8087/instances]): 404 : [{"timestamp":"2022-10-22 13:07:57:010","status":404,"error":"Not Found","message":"","path":"/instances"}]. Further attempts are logged on DEBUG level
+2022-10-22 13:08:16.271  INFO 2291 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2022-10-22 13:08:16.304  INFO 2291 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-22 13:16:13.118  WARN 2488 --- [main] o.s.b.StartupInfoLogger                  : InetAddress.getLocalHost().getHostName() took 5005 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2022-10-22 13:16:08.108  INFO 2488 --- [main] c.t.h.Application                        : Starting Application on jorgedeMacBook-Pro.local with PID 2488 (/Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022/target/classes started by jorgezhang in /Users/jorgezhang/IdeaProjects/tidb/tidb_hackathon_2022)
+2022-10-22 13:16:18.138 DEBUG 2488 --- [main] c.t.h.Application                        : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-10-22 13:16:18.139  INFO 2488 --- [main] c.t.h.Application                        : The following profiles are active: dev
+2022-10-22 13:16:19.297  INFO 2488 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8087 (http)
+2022-10-22 13:16:19.304  INFO 2488 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-10-22 13:16:19.305  INFO 2488 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-22 13:16:19.418  INFO 2488 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-10-22 13:16:19.418  INFO 2488 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1240 ms
+2022-10-22 13:16:19.944  INFO 2488 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-10-22 13:16:20.060  INFO 2488 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-22 13:16:20.145  WARN 2488 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-10-22 13:16:20.429  INFO 2488 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2022-10-22 13:16:20.529  INFO 2488 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8087 (http) with context path ''
+2022-10-22 13:16:20.584  INFO 2488 --- [main] c.t.h.Application                        : Started Application in 32.941 seconds (JVM running for 43.782)
+2022-10-22 13:16:20.589  INFO 2488 --- [main] c.t.h.StartupRunner                      :   _   _   _   _   _   _   _   _
+2022-10-22 13:16:20.589  INFO 2488 --- [main] c.t.h.StartupRunner                      :  / \ / \ / \ / \ / \ / \ / \ / \
+2022-10-22 13:16:20.589  INFO 2488 --- [main] c.t.h.StartupRunner                      : ( c | o | m | p | l | e | t | e )
+2022-10-22 13:16:20.589  INFO 2488 --- [main] c.t.h.StartupRunner                      :  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+2022-10-22 13:16:20.590  INFO 2488 --- [main] c.t.h.StartupRunner                      : hackathon 启动完毕,时间:2022-10-22T13:16:20.589
+2022-10-22 13:16:20.795  INFO 2488 --- [RMI TCP Connection(1)-192.168.81.153] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-22 13:16:20.796  INFO 2488 --- [RMI TCP Connection(1)-192.168.81.153] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-10-22 13:16:20.802  INFO 2488 --- [RMI TCP Connection(1)-192.168.81.153] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2022-10-22 13:16:35.879  WARN 2488 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=hackathon, managementUrl=http://192.168.81.153:8087/actuator, healthUrl=http://192.168.81.153:8087/actuator/health, serviceUrl=http://192.168.81.153:8087/) at spring-boot-admin ([http://localhost:8087/instances]): 404 : [{"timestamp":"2022-10-22 13:16:35:846","status":404,"error":"Not Found","message":"","path":"/instances"}]. Further attempts are logged on DEBUG level
+2022-10-22 13:17:10.622  INFO 2488 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2022-10-22 13:17:10.638  INFO 2488 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'

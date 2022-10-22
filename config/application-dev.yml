@@ -1,0 +1,128 @@
+server:
+  compression:
+    enabled: true
+  port: 8087
+
+spring:
+  application:
+    name: 'hackathon'
+  jackson:
+    timeZone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss:SSS
+    default-property-inclusion: non_null
+    parser:
+      allow-single-quotes: true
+    serialization:
+      fail-on-empty-beans: false
+    deserialization:
+      fail-on-unknown-properties: false
+  cache:
+    type: redis
+    redis:
+      time-to-live: PT15M
+      key-prefix: '@project.name@'
+      use-key-prefix: true
+      cache-null-values: false
+  datasource:
+    dynamic:
+      primary: primary #设置默认的数据源或者数据源组,默认值即为master
+      strict: false
+      name: hikariDataSource
+      datasource:
+        primary:
+          url: jdbc:mysql://49.233.86.127:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&autoReconnect=true&useSSL=false
+          username: root
+          password: 4ever^Tech^
+        secondary:
+          url: jdbc:mysql://49.233.86.127:3306/test2?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+          username: root
+          password: 4ever^Tech^
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 30000
+      transaction-isolation: 4 # java.sql.Connection.TRANSACTION_REPEATABLE_READ
+  # redis 集群配置
+  #  redis:
+  #    database: 0
+  #    password: 'Cloud@#$%123'
+  #    port: 6379
+  #    cluster:
+  #      nodes:
+  #        - cluster-101:6379
+  #        - cluster-102:6379
+  #        - cluster-103:6379
+  #        - cluster-104:6379
+  #        - cluster-105:6379
+  #        - cluster-106:6379
+  #    lettuce:
+  #      pool:
+  #        max-active: 10
+  #        max-idle: 8
+  #        min-idle: 0
+  #      cluster:
+  #        refresh:
+  #          period: PT60S
+  # redis 单机配置
+  redis:
+    database: 0
+    host: 192.168.175.145
+    port: 6379
+    password:
+    timeout: 1000
+    pool:
+      max-active: 20
+      max-wait: -1
+      max-idle: 10
+      min-idle: 1
+  mvc:
+    throw-exception-if-no-handler-found: false
+  groovy:
+    template:
+      check-template-location: false
+  main:
+    allow-bean-definition-overriding: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:${server.port}
+
+mybatis-plus:
+  mapper-locations: classpath:/com/tidb/hackathon/mapper/xml/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    default-statement-timeout: 3 # 查询超时间,单位秒,不设置则无线等待
+    default-fetch-size: 100
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.tidb.hackathon.entity
+
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
+    auto-startup: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+swagger:
+  info:
+    name: ${spring.application.name}
+    group: 'com.tidb'
+    version: '1.0'
+    profile: ${spring.profiles.active}
+    description: '@project.description@'
+    contact:
+      name: tidb
+      mail: tidb@hackathon.com
+
+logging:
+  level:
+    com.tidb.hackathon: debug
+  file:
+    name: logs/info.log
