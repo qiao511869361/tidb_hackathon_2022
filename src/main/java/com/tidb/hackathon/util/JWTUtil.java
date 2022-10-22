@@ -1,6 +1,7 @@
 package com.tidb.hackathon.util;
 
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.json.JSON;
 import cn.hutool.json.JSONUtil;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -9,9 +10,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.security.KeyFactory;
 import java.security.PublicKey;
 import java.security.Signature;
+import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
 import java.util.HashMap;
@@ -151,55 +154,33 @@ public class JWTUtil {
         return publicKey;
     }
 
-
-    /**
-     * 生成token，自定义过期时间 毫秒
-     *
-     * @param userTokenDTO
-     * @return
-     */
-    public static String generateToken(UserTokenDTO userTokenDTO) {
-        try {
-            // 私钥和加密算法
-            Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);
-//            Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);
-            // 设置头部信息
-            Map<String, Object> header = new HashMap<>(2);
-            header.put("Type", "Jwt");
-            header.put("alg", "RS256");
-
-            return JWT.create()
-                    .withHeader(header)
-                    .withClaim("token", JSONUtil.toJsonStr(userTokenDTO))
-                    //.withExpiresAt(date)
-                    .sign(algorithm);
-        } catch (Exception e) {
-            logger.error("generate token occur error, error is:{}", e);
-            return null;
-        }
-    }
-
     /**
      * 检验token是否正确
      *
-     * @param content
+     * @param parts
      * @return
      */
-    public static boolean verifyToken(String content, String sign) {
-        try {
-            KeyFactory keyFactory = KeyFactory.getInstance("RSA");
-            byte[] encodedKey = Base64.getDecoder().decode(publicKeyStr);
-            PublicKey pubKey = keyFactory.generatePublic(new X509EncodedKeySpec(encodedKey));
+    public static boolean verifyToken(String[] parts) throws NoSuchAlgorithmException, InvalidKeySpecException, InvalidKeyException, SignatureException {
+        KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+        byte[] encodedKey = Base64.getDecoder().decode(publicKeyStr);
+        PublicKey pubKey = keyFactory.generatePublic(new X509EncodedKeySpec(encodedKey));
 
-            Signature signature = Signature.getInstance(SIGN_ALGORITHMS);
+        Signature signature = Signature.getInstance(SIGN_ALGORITHMS);
 
-            signature.initVerify(pubKey);
-            signature.update(content.getBytes(DEFAULT_CHARSET));
+        signature.initVerify(pubKey);
+        String content = String.format("%s.%s", parts[0], parts[1]);
+        signature.update(content.getBytes(DEFAULT_CHARSET));
+        boolean sigVerificationRes = signature.verify(org.apache.commons.codec.binary.Base64.decodeBase64(parts[2]));
 
-            return signature.verify(Base64.getDecoder().decode(sign));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
+        // 查看expiration
+        String payload = new String(org.apache.commons.codec.binary.Base64.decodeBase64(parts[1]), StandardCharsets.UTF_8);
+        logger.info("Base64 Decoded PayLoad: {}", payload);
+        JSON payloadJson = JSONUtil.parseObj(payload);
+        long exp = Long.parseLong(payloadJson.getByPath("exp").toString());
+        logger.info("Parsed EXP: {}", exp);
+
+        long cur = System.currentTimeMillis() / 1000L;
+        boolean expRes = exp >= cur;
+        return sigVerificationRes && expRes;
     }
 }

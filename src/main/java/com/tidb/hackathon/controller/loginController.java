@@ -31,7 +31,7 @@ public class loginController {
      * 登录获取jwt
      */
     @RequestMapping(value = "/api/getJWT", method = RequestMethod.POST, produces = APPLICATION_JSON_VALUE)
-    public Result getJWT(@RequestBody LoginUserVO loginUserVO) throws Exception{
+    public String getJWT(@RequestBody LoginUserVO loginUserVO) throws Exception{
         //1.判断用户名密码是否正确
         String password = redisService.get(loginUserVO.getUsername());
         if (password == null) {
@@ -41,13 +41,14 @@ public class loginController {
             throw new BizException(ResultInfo.ACCUNT_PASSWORD_ERROR.getMsg());
         }
         //创建签名
-        String token  = JWTUtil.creatTokenByRS256(loginUserVO.getUsername() + password);
+        String token  = JWTUtil.creatTokenByRS256(loginUserVO.getUsername());
         //3.存入token至redis
         String redisKey = loginUserVO.getUsername() + "_username";
         redisService.set(redisKey, token);
         //设置过期时间
         redisService.expire(redisKey,5, TimeUnit.MINUTES);
-        return Result.success();
+
+        return token;
 
     }
 

@@ -32,6 +32,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value =NullPointerException.class)
     @ResponseBody
     public Result exceptionHandler(HttpServletRequest req, NullPointerException e){
+        e.printStackTrace();
+        System.out.println("~~~~~~~~~~req = " + req.toString() + ", e = " + e);
         return Result.error(ResultInfo.BODY_NOT_MATCH);
     }
 
@@ -45,6 +47,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value =Exception.class)
     @ResponseBody
     public Result exceptionHandler(HttpServletRequest req, Exception e){
+        e.printStackTrace();
+        System.out.println("~~~~~~~~~~req = " + req.toString() + ", e = " + e);
         return Result.error(ResultInfo.INTERNAL_SERVER_ERROR);
     }
 }

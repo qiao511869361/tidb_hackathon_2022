@@ -26,20 +26,23 @@ public class JWTInterceptor implements HandlerInterceptor {
             throw new BizException("400", "Invalid JWT Format");
 
         try {
-            JWTUtil.verifyToken(strs[0] + "." + strs[1], strs[2]);
+            return JWTUtil.verifyToken(strs);
         } catch (SignatureVerificationException e) {
+            e.printStackTrace();
             logger.error("Invalid Signature: {}", token);
             throw new BizException("400", "Invalid Token Signature");
         } catch (TokenExpiredException e) {
+            e.printStackTrace();
             logger.error("Token Expired: {}", token);
             throw new BizException("400", "Token Expired");
         } catch (AlgorithmMismatchException e) {
+            e.printStackTrace();
             logger.error("Algorithm Mismatch: {}", token);
             throw new BizException("400", "Algorithm Mismatch");
         } catch (Exception e) {
+            e.printStackTrace();
             logger.error("JWT verification error: {}", token);
             throw new BizException("500", "JWT Verification Error");
         }
-        return true;
     }
 }
