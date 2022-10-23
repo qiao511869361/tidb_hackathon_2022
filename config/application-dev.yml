@@ -126,3 +126,7 @@ logging:
     com.tidb.hackathon: debug
   file:
     name: logs/info.log
+
+credential:
+  username: root
+  pwd: root

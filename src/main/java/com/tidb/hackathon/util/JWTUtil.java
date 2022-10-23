@@ -1,36 +1,44 @@
 package com.tidb.hackathon.util;
-import cn.hutool.core.date.DateTime;
-import cn.hutool.core.date.DateUnit;
+
 import cn.hutool.core.date.DateUtil;
-import cn.hutool.core.io.unit.DataUnit;
+import cn.hutool.json.JSON;
 import cn.hutool.json.JSONUtil;
 import com.auth0.jwt.JWT;
-import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.interfaces.DecodedJWT;
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import com.tidb.hackathon.exception.BizException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.security.KeyFactory;
+import java.security.PublicKey;
+import java.security.Signature;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.X509EncodedKeySpec;
+import java.util.Base64;
+import java.util.HashMap;
+import java.util.Map;
+
 import com.tidb.hackathon.entity.RSA256Key;
 import com.tidb.hackathon.entity.UserTokenDTO;
-import com.tidb.hackathon.exception.BizException;
 import com.tidb.hackathon.pojo.ResultInfo;
-import org.bouncycastle.jcajce.provider.util.SecretKeyUtil;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.security.*;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.PKCS8EncodedKeySpec;
-import java.security.spec.X509EncodedKeySpec;
-import java.util.Base64;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+
 
 @Component
 public class JWTUtil {
     private static final Logger logger = LoggerFactory.getLogger(JWTUtil.class);
+
+    public static final String SIGN_ALGORITHMS = "SHA256WithRSA";
+
+    public static final Charset DEFAULT_CHARSET = Charset.forName("UTF-8");
 
     //私钥
     private static final String TOKEN_SECRET = "123456";
@@ -146,45 +154,33 @@ public class JWTUtil {
         return publicKey;
     }
 
-
-    /**
-     * 生成token，自定义过期时间 毫秒
-     *
-     * @param userTokenDTO
-     * @return
-     */
-    public static String generateToken(UserTokenDTO userTokenDTO) {
-        try {
-            // 私钥和加密算法
-            Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);
-//            Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);
-            // 设置头部信息
-            Map<String, Object> header = new HashMap<>(2);
-            header.put("Type", "Jwt");
-            header.put("alg", "RS256");
-
-            return JWT.create()
-                    .withHeader(header)
-                    .withClaim("token", JSONUtil.toJsonStr(userTokenDTO))
-                    //.withExpiresAt(date)
-                    .sign(algorithm);
-        } catch (Exception e) {
-            logger.error("generate token occur error, error is:{}", e);
-            return null;
-        }
-    }
-
     /**
      * 检验token是否正确
      *
-     * @param token
+     * @param parts
      * @return
      */
-    public static UserTokenDTO parseToken(String token) throws Exception {
-        Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);
-        JWTVerifier verifier = JWT.require(algorithm).build();
-        DecodedJWT jwt = verifier.verify(token);
-        String tokenInfo = jwt.getClaim("token").asString();
-        return JSONUtil.toBean(tokenInfo,UserTokenDTO.class);
+    public static boolean verifyToken(String[] parts) throws NoSuchAlgorithmException, InvalidKeySpecException, InvalidKeyException, SignatureException {
+        KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+        byte[] encodedKey = Base64.getDecoder().decode(publicKeyStr);
+        PublicKey pubKey = keyFactory.generatePublic(new X509EncodedKeySpec(encodedKey));
+
+        Signature signature = Signature.getInstance(SIGN_ALGORITHMS);
+
+        signature.initVerify(pubKey);
+        String content = String.format("%s.%s", parts[0], parts[1]);
+        signature.update(content.getBytes(DEFAULT_CHARSET));
+        boolean sigVerificationRes = signature.verify(org.apache.commons.codec.binary.Base64.decodeBase64(parts[2]));
+
+        // 查看expiration
+        String payload = new String(org.apache.commons.codec.binary.Base64.decodeBase64(parts[1]), StandardCharsets.UTF_8);
+        logger.info("Base64 Decoded PayLoad: {}", payload);
+        JSON payloadJson = JSONUtil.parseObj(payload);
+        long exp = Long.parseLong(payloadJson.getByPath("exp").toString());
+        logger.info("Parsed EXP: {}", exp);
+
+        long cur = System.currentTimeMillis() / 1000L;
+        boolean expRes = exp >= cur;
+        return sigVerificationRes && expRes;
     }
 }
